@@ -16,7 +16,7 @@ module.exports = (env) => ({
       warnings: true,
     },
   },
-  entry: [path.join(PATH_SOURCE, './index.js')],
+  entry: [path.join(PATH_SOURCE, './main.js')],
   output: {
     path: PATH_DIST,
     filename: 'js/[name].[hash].js',
@@ -53,12 +53,7 @@ module.exports = (env) => ({
         test: /\.s[ac]ss$/i,
         use: [
           { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-            },
-          },
+          { loader: 'css-loader' },
           { loader: 'sass-loader' },
         ],
       },

@@ -12,7 +12,7 @@
   ],
   "author": "Nick Garcia <me@nickgarcia.me> (https://nickgarcia.me)",
   "homepage": "https://github.com/NicksIdeaEngine/learn-react-js-fcc-course#readme",
-  "main": "./src/index.js",
+  "main": "./src/main.js",
   "license": "MIT",
   "private": true,
   "scripts": {

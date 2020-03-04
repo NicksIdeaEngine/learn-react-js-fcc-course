@@ -1,9 +1,14 @@
-@import 'palettes/gruvbox-light.scss';
+@import 'palettes/gruvbox-dark.scss';
 
 body {
   background-color: $bg0_h;
+  color: $fg2;
 }
 
 h1 {
   color: $dark_blue;
+}
+
+.blurb {
+  color: $green;
 }
