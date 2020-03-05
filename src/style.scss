@@ -1,8 +1,9 @@
-@import 'palettes/gruvbox-light.scss';
+@import 'palettes/gruvbox-dark.scss';
 
 body {
   background-color: $bg0_h;
   color: $fg2;
+  margin: 0;
 }
 
 h1 {
@@ -17,6 +18,14 @@ h3 {
   color: $dark_blue;
 }
 
-.blurb {
-  color: $green;
+.navbar {
+  background-color: $dark_purple;
+  height: 100px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $bg0_h;
 }
