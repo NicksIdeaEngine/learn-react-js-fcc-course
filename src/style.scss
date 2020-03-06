@@ -1,31 +1,172 @@
-@import 'palettes/gruvbox-dark.scss';
+@import 'palettes/gruvbox-light.scss';
 
 body {
   background-color: $bg0_h;
   color: $fg2;
   margin: 0;
+  padding: 0;
+  font-size: 20px;
 }
 
-h1 {
-  color: $dark_blue;
-}
-
-h2 {
-  color: $dark_blue;
-}
-
-h3 {
-  color: $dark_blue;
-}
-
-.navbar {
-  background-color: $dark_purple;
-  height: 100px;
-  margin-bottom: 15px;
+.page-header {
+  background-color: $fg3;
   text-align: center;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $bg0_h;
+  color: $bg1;
+  padding: 1em 0 0.5em;
+  margin: 0;
+
+  > .page-headline {
+    margin: 0;
+    padding: 0;
+  }
+
+  > .navbar {
+    margin: 0.5em 0 0;
+    
+    > .navbar-item {
+      text-decoration: none;
+      color: $bg1;
+    }
+  }
+}
+
+.todo-list {
+  background-color: $fg4;
+  margin: 0.5em auto;
+  padding: 0.25em 1em;
+  max-width: 30em;
+  border-radius: 2em;
+}
+
+.todo-label {
+  display: block;
+  position: relative;
+  border-radius: 0.25em;
+  border: 2px solid $bg2;
+  margin: 0.5em auto;
+  padding: 0.5em;
+  cursor: pointer;
+  background-color: $blue;
+  color: $bg0;
+  clear: both;
+
+  > input {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  > .todo-checkbox {
+    position: absolute;
+    top: 0.4em;
+    left: 0.4em;
+    height: 1.25em;
+    width: 1.25em;
+    background-color: transparent;
+    border-radius: 0.75em;
+    border: 0.1em solid $bg0;
+  }
+
+  > .todo-checkbox::after {
+    position: absolute;
+    content: "";
+    left: 0.6em;
+    top: 0.6em;
+    height: 0px;
+    width: 0px;
+    border-radius: 0.25em;
+    border: solid $bg0;
+    border-width: 0 0.1em 0.1em 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity: 1;
+  }
+
+  > input:checked ~ .todo-checkbox {
+    background-color: $fg1;
+    border-radius: 0.25em;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    border: 0.1em solid $bg0;
+  }
+
+  > input:checked ~ .todo-checkbox::after {
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+    left: 0.4em;
+    top: 0.2em;
+    width: 0.4em;
+    height: 0.6em;
+    border: solid $bg0;
+    border-width: 0 0.1em 0.1em 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  > .todo-checkbox::before {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 10px;
+    width: 0px;
+    height: 0px;
+    border-radius: 5px;
+    border: 2px solid #FFFFFF;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);    
+  }
+
+  > input:checked ~ .todo-checkbox::before {
+    left: -3px;
+    top: -3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    -webkit-transform: scale(3);
+    -ms-transform: scale(3);
+    transform: scale(3);
+    opacity:0;
+    z-index: 999;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+  }
+
+  > .todo-description {
+    padding: 0 1.75em;
+  }
+
+  > .todo-project {
+    float: right;
+    top: 50%;
+    margin: 0;
+    position: absolute;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0.5em;
+    color: $dark_blue;
+    font-size: 0.75em;
+    background-color: $bg1;
+    border-radius: 0.25em;
+    padding: 0.5em 0.5em;
+  }
+}
+
+.page-footer {
+  background-color: $fg4;
+  opacity: 0.5;
+  color: $bg0;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.5em;
+  border-radius: 1em;
+  max-width: 16em;
 }
