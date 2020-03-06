@@ -10,4 +10,10 @@ The first app created in this course is a traditional Todo App. Here's a screens
 
 Colors are pulled from [morhetz/gruvbox](https://github.com/morhetz/gruvbox). It's the color scheme I use in VS Code and all over my OS UI. I'll change/improve the coloring during a future update.
 
-That's it for now. Back to studying!
+For anyone curious, here's how my VS Code looks. It's using gruvbox light (hard contrast):
+
+![Dev_Environment_Screenshot](./src/media/dev-environment-screenshot.png 'Dev Environment Screenshot')
+
+And here's all three monitors:
+
+![Dev_Environment_Screenshot_Full](./src/media/dev-environment-screenshot-full.png 'Dev Environment Screenshot Full')
